@@ -65,12 +65,12 @@ i.phone-icon{
 }
 
 .main-section{
-    height: calc(100vh - 100px);
+    height: calc(85vh - 100px);
     position: relative;
     -webkit-background-size: cover;
     background-size: cover;
     background-image: url(../img/mall-bg.jpg);
-    line-height: 100vh;
+    line-height: 90vh;
     text-align: center;
     padding-top: 100px;
 }
@@ -313,4 +313,9 @@ i.phone-icon{
     background: #a6d7fa;
     border-radius: 0;
     top: 6px;
+}
+
+.third-section{
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
