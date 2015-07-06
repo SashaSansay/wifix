@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'light';
+    src: url('../fonts/light.otf'),
+    url('../fonts/light.eot'),
+    url('../fonts/light.woff'),
+    url('../fonts/light.woff2');
+}
+@font-face {
+    font-family: 'regular';
+    src: url('../fonts/ref.otf'),
+    url('../fonts/ref.eot'),
+    url('../fonts/ref.woff'),
+    url('../fonts/ref.woff2');
+}
