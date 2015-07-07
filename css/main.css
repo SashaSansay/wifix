@@ -134,6 +134,7 @@ i.phone-icon{
     cursor: pointer;
     line-height: 1;
     box-shadow: 0px 1px rgba(0,0,0,.25);
+    font-family: 'regular';
 }
 .button-call-main:before{
     content: '';
@@ -539,6 +540,7 @@ i.clients-wifix{
     padding-top: 100px;
     padding-bottom: 70px;
     position: relative;
+    overflow: hidden;
 }
 
 #gmap{
@@ -547,4 +549,46 @@ i.clients-wifix{
     position: absolute;
     top: 0;
     left: 0;
+    background: #2b2b2b;
+}
+
+.contacts-inner{
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    overflow: hidden;
+}
+
+.contacts-head{
+    float: left;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    margin-top: -58px;
+}
+
+.contacts-right{
+    float: right;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.send-mail{
+    color: #7ed3f6;
+}
+
+.contacts-button {
+    color: #044166;
+    background: #fff;
+}
+
+.contacts-button:before{
+    border-color: transparent #fff transparent transparent;
+}
+
+.contacts-button:after{
+    border-color:transparent transparent transparent #fff;
 }
