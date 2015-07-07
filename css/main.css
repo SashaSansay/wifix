@@ -201,7 +201,7 @@ i.phone-icon{
 }
 .button-call-main:hover:before{
     border-color: transparent #349fcc transparent transparent;
- }
+}
 
 .button-call-main:hover:after{
     border-color: transparent transparent transparent #349fcc;
@@ -397,11 +397,11 @@ i.phone-icon{
 }
 
 .descr-1{
-    margin-left: 50px;
+    margin-left: 110px;
 }
 
 .descr+.descr{
-    margin-left: 50px;
+    margin-left: 45px;
 }
 
 .descr-text{
@@ -759,6 +759,16 @@ i.close{
     width: 306px;
     outline: none;
     margin-bottom: 10px;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -ms-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+}
+
+.text:focus{
+    border-color: #fff;
+    color: #1a1a1a;
 }
 
 .feedback-button{
