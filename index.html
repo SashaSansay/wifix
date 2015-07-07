@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/hugrid.css">
         <link rel="stylesheet" href="css/columns.css">
+        <link rel="stylesheet" href="css/tooltips.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/jquery-1.6.2.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -25,8 +26,8 @@
                 pagetopmargin = 0;
                 rowheight = 20;
                 gridonload = 'on';
-                makehugrid();
-                setgridonload();
+                //makehugrid();
+                //setgridonload();
             });
         </script>
     </head>
@@ -113,8 +114,8 @@
                     СЕТЬ С УМОМ
                 </div>
                 <div class="second-main-subline col-6-5-gut">
-                    Мы начинаем строительство сети с исследования.
-                    Это позволяет получить до <a href="#" class="second-href">«99,3% uptime»</a> работы сети
+                    Мы начинаем строительство сети с исследования.<br>
+                    Это позволяет получить до «<a href="#" class="second-href tooltip" data-tooltip="ДА,ДА ОВЕР 99.3%!!">99,3% uptime</a>» работы сети
                     в будущем. Вся работа проходит бесплатно, вы платите
                     только за оборудование
                 </div>
@@ -297,5 +298,23 @@
                 </div>
             </div>
         </section>
+        <div class="dark">
+            <div class="close-feedback"><i class="close"></i> Закрыть</div>
+            <div class="feedback-wrap">
+                <div class="feedback-form">
+                    <div class="feedback-head">
+                        Мы свяжемся<br>
+                        с вами
+                    </div>
+                    <form class="feedback" action="/">
+                        <input class="text" type="text" placeholder="Как вас зовут?" name="name"/>
+                        <input class="text" type="text" placeholder="Укажите ваш телефон" name="phone"/><i class="ok"></i>
+                        <button class="button-call-main feedback-button">
+                            Отправить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

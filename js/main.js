@@ -47,4 +47,12 @@ $(document).ready(function(){
 //
     }
     init();
+
+    $('.call-us').click(function(){
+        $('body').addClass('opened');
+    });
+
+    $('.close-feedback').click(function(){
+       $('body').removeClass('opened');
+    });
 });

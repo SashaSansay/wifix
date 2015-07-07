@@ -1,5 +1,12 @@
 body,html{
     font-family: 'light';
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
 }
 
 i{
@@ -57,6 +64,15 @@ i.phone-icon{
     color: #fff;
     text-decoration: none;
     border-bottom: 1px solid rgba(255,255,255,.3);
+    -webkit-transition: border .1s ease;
+    -moz-transition: border .1s ease;
+    -ms-transition: border .1s ease;
+    -o-transition: border .1s ease;
+    transition: border .1s ease;
+}
+
+.main-menu a:hover{
+    border-bottom: 1px solid rgba(255,255,255,0);
 }
 
 .main-menu li{
@@ -129,7 +145,7 @@ i.phone-icon{
     font-size: 21px;
     background: #26a9e0;
     display: inline-block;
-    padding: 10px 13px 9px;
+    padding: 8px 13px 11px;
     position: relative;
     cursor: pointer;
     line-height: 1;
@@ -140,6 +156,8 @@ i.phone-icon{
     -ms-transition: all .15s ease;
     -o-transition: all .15s ease;
     transition: all .15s ease;
+    border: 0;
+    outline: none;
 }
 .button-call-main:before{
     content: '';
@@ -179,7 +197,6 @@ i.phone-icon{
 
 .button-call-main:hover{
     background: #349fcc;
-    box-shadow: inset 0px 1px 0px rgba(0,0,0,.25);
     text-shadow: 0px 1px rgba(0,0,0,.35);
 }
 .button-call-main:hover:before{
@@ -277,7 +294,17 @@ i.phone-icon{
     color:#999;
     text-decoration: none;
     display: inline;
-    border-bottom: 1px dashed #999;
+    border-bottom: 1px dotted #999;
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+}
+
+.second-href:hover{
+    color: #3A3A3A;
+    border-bottom: 1px dotted rgba(0,0,0,0);
 }
 
 .options{
@@ -311,6 +338,7 @@ i.phone-icon{
     font-size: 18px;
     color: #1e1e1e;
     line-height: 24px;
+    line-height: 1.48;
 }
 
 .map-left-head {
@@ -368,6 +396,10 @@ i.phone-icon{
     padding-top: 23px;
 }
 
+.descr-1{
+    margin-left: 50px;
+}
+
 .descr+.descr{
     margin-left: 50px;
 }
@@ -376,6 +408,7 @@ i.phone-icon{
     color:#2f2f2f;
     opacity: .7;
     font-size: 12px;
+    line-height: 1.2;
 }
 
 .descr:before{
@@ -623,6 +656,119 @@ i.clients-wifix{
 
 .contacts-button:hover{
     color: #aaaaaa;
-    box-shadow: inset 0px 1px 0px rgba(0,0,0,.25);
     text-shadow: none;
+}
+
+.dark{
+    position: fixed;
+    background: rgba(0,0,0,.9);
+    width: 100vw;
+    z-index: 99999;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+}
+
+.opened .dark{
+    visibility: visible;
+}
+
+.close-feedback{
+    color: #efeff3;
+    font-size: 13px;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    cursor: pointer;
+}
+
+i.close{
+    background: url(../img/close.png);
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.feedback-wrap{
+    position: fixed;
+    width: 440px;
+    height: 360px;
+    left: 50%;
+    top: 50%;
+    -webkit-perspective: 1300px;
+    -moz-perspective: 1300px;
+    perspective: 1300px;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.feedback-form {
+    background-color: #fff;
+    padding: 33px 45px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateY(-70deg);
+    -moz-transform: rotateY(-70deg);
+    -ms-transform: rotateY(-70deg);
+    transform: rotateY(-70deg);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.opened .feedback-wrap{
+    visibility: visible;
+}
+
+.opened .feedback-form{
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
+.feedback-head{
+    font-size: 38px;
+    line-height: 38px;
+    margin-bottom: 30px;
+}
+
+.text{
+    border: 2px solid #e6e6e6;
+    padding: 10px  22px 14px;
+    color: #666666;
+    font-size: 21px;
+    clear: both;
+    width: 306px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.feedback-button{
+    margin-top: 17px;
+}
+i.ok{
+    background: url(../img/ok.png);
+    width: 19px;
+    height: 14px;
+    position: absolute;
+    top: 224px;
+    right: 55px;
 }
