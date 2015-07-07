@@ -135,6 +135,11 @@ i.phone-icon{
     line-height: 1;
     box-shadow: 0px 1px rgba(0,0,0,.25);
     font-family: 'regular';
+    -webkit-transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    -o-transition: all .15s ease;
+    transition: all .15s ease;
 }
 .button-call-main:before{
     content: '';
@@ -147,6 +152,11 @@ i.phone-icon{
     position: absolute;
     left: -12px;
     top: 0;
+    -webkit-transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    -o-transition: all .15s ease;
+    transition: all .15s ease;
 }
 
 .button-call-main:after{
@@ -160,6 +170,24 @@ i.phone-icon{
     position: absolute;
     right: -12px;
     top: 0;
+    -webkit-transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    -o-transition: all .15s ease;
+    transition: all .15s ease;
+}
+
+.button-call-main:hover{
+    background: #349fcc;
+    box-shadow: inset 0px 1px 0px rgba(0,0,0,.25);
+    text-shadow: 0px 1px rgba(0,0,0,.35);
+}
+.button-call-main:hover:before{
+    border-color: transparent #349fcc transparent transparent;
+ }
+
+.button-call-main:hover:after{
+    border-color: transparent transparent transparent #349fcc;
 }
 
 .options-main{
@@ -582,13 +610,19 @@ i.clients-wifix{
 
 .contacts-button {
     color: #044166;
-    background: #fff;
+    background: #fff !important;;
 }
 
 .contacts-button:before{
-    border-color: transparent #fff transparent transparent;
+    border-color: transparent #fff transparent transparent !important;
 }
 
 .contacts-button:after{
-    border-color:transparent transparent transparent #fff;
+    border-color:transparent transparent transparent #fff !important;
+}
+
+.contacts-button:hover{
+    color: #aaaaaa;
+    box-shadow: inset 0px 1px 0px rgba(0,0,0,.25);
+    text-shadow: none;
 }
