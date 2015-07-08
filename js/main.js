@@ -2,7 +2,7 @@ $(document).ready(function(){
     function init() {
         var mapOptions = {
             center: new google.maps.LatLng(53.2225657,50.1905889),
-            zoom: 13,
+            zoom: 14,
             zoomControl: false,
             disableDoubleClickZoom: true,
             mapTypeControl: false,
@@ -24,8 +24,9 @@ $(document).ready(function(){
             ['WiFiX', 'undefined', 'undefined', 'undefined', 'undefined', 53.2225657, 50.1905889, 'undefined']
         ];
         new google.maps.Marker({
-            icon: "https://raw.githubusercontent.com/SashaSansay/wifix/master/img/pin.png",
+            icon: "http://aruba.wifix.pro/img/pin.png",
             position: new google.maps.LatLng(53.2225657, 50.1905889),
+            map: map
         })
         //for (i = 0; i < locations.length; i++) {
         //    if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
@@ -54,5 +55,11 @@ $(document).ready(function(){
 
     $('.close-feedback').click(function(){
        $('body').removeClass('opened');
+    });
+
+    $(window).scroll(function(){
+        if($(window).scrollTop()+$(window).height() >= $('.third-section').offset().top){
+            $('.third-section').addClass('started');
+        }
     });
 });
