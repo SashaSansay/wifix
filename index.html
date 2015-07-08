@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/hugrid.css">
         <link rel="stylesheet" href="css/columns.css">
         <link rel="stylesheet" href="css/tooltips.css">
+        <link rel="stylesheet" href="css/animation.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/jquery-1.6.2.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -26,8 +27,8 @@
                 pagetopmargin = 0;
                 rowheight = 20;
                 gridonload = 'on';
-                //makehugrid();
-                //setgridonload();
+                makehugrid();
+                setgridonload();
             });
         </script>
     </head>
@@ -175,7 +176,21 @@
                         </div>
                     </div><!--
                     --><div class="map-right col-6-6-gut">
-                        <div class="map-image"></div>
+                        <div class="map-image">
+                            <div class="circls">
+                                <div class="circ cir1"></div>
+                                <div class="circ cir2"></div>
+                                <div class="circ cir3"></div>
+                                <div class="circ cir4"></div>
+                            </div>
+                            <div class="pins">
+                                <div class="pin pin1"></div>
+                                <div class="pin pin2"></div>
+                                <div class="pin pin3"></div>
+                                <div class="pin pin4"></div>
+                            </div>
+                            <div class="map-norm"></div>
+                        </div>
                         <div class="map-description">
                             <div class="descr descr-1">
                                 <div class="descr-text">
@@ -215,7 +230,24 @@
         </section>
         <section class="third-section">
             <div class="third-inner main-width center">
-                <div class="third-left"></div>
+                <div class="third-left">
+                    <div id='td'>
+                        <div class='aruba'>
+                            <div class='power on on1'></div>
+                            <div class='ent on on2'></div>
+                            <div class='hz on zz'></div>
+                        </div>
+                        <div class='shadow'></div>
+                        <div class='circles'>
+                            <div class='c1 c'></div>
+                            <div class='c2 c'></div>
+                            <div class='c3 c'></div>
+                            <div class='c4 c'></div>
+                            <div class='c5 c'></div>
+                            <div class='c6 c'></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="third-right col-5-4-gut">
                     <div class="third-head">Теплый приём<br>от ARUBA</div>
                     <div class="third-text">

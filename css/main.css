@@ -369,14 +369,210 @@ i.phone-icon{
 }
 
 .map-image{
-    background-image: url(../img/map-1.png);
+    /*background-image: url(../img/map-1.png);
     width: 756px;
-    height: 296px;
+    height: 296px;*/
+    position: relative;
+    perspective: 8000px;
+    top: -15px;
 }
+
+.map-norm{
+    background: url(../img/room_scheme_new.png);
+    background-size: 100%;
+    width: 740px;
+    height: 338px;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    -moz-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    -ms-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    -o-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    left: 9px;
+    transition: all 1s ease-in-out;
+}
+
+.map-norm:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% - 12px);
+    height: calc(100% - 8px);
+    background: #e7f6ff;
+    top: 6px;
+    left: 6px;
+    z-index: -2;
+    transform: translate3d(-2px,-2px,-2px);
+    opacity: .5;
+}
+
+.pins{
+    position: absolute;
+    width: 740px;
+    height: 338px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    -moz-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    -ms-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    -o-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    left: 9px;
+    z-index: 9;
+}
+
+.circls{
+    position: absolute;
+    width: 740px;
+    height: 338px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    -moz-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    -ms-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    -o-transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    transform: rotateZ(71deg) rotateX(42deg) rotateY(-60deg);
+    left: 9px;
+    z-index: 8;
+
+}
+
+.pin{
+    background: url(../img/pin_map.png);
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.pin1{
+    -webkit-transform: rotateX(-90deg) rotateY(50deg) translate3d(46px,35px,0px);
+    -moz-transform: rotateX(-90deg) rotateY(50deg) translate3d(46px,35px,0px);
+    -ms-transform: rotateX(-90deg) rotateY(50deg) translate3d(46px,35px,0px);
+    -o-transform: rotateX(-90deg) rotateY(50deg) translate3d(46px,35px,0px);
+    transform: rotateX(-90deg) rotateY(50deg) translate3d(46px,35px,0px);
+}
+
+.pin2{
+    -webkit-transform: rotateX(-90deg) rotateY(50deg) translate3d(232px,105px,0px);
+    -moz-transform: rotateX(-90deg) rotateY(50deg) translate3d(232px,105px,0px);
+    -ms-transform: rotateX(-90deg) rotateY(50deg) translate3d(232px,105px,0px);
+    -o-transform: rotateX(-90deg) rotateY(50deg) translate3d(232px,105px,0px);
+    transform: rotateX(-90deg) rotateY(50deg) translate3d(232px,105px,0px);
+}
+
+.pin3{
+    -webkit-transform: rotateX(-90deg) rotateY(50deg) translate3d(136px,178px,0px);
+    -moz-transform: rotateX(-90deg) rotateY(50deg) translate3d(136px,178px,0px);
+    -ms-transform: rotateX(-90deg) rotateY(50deg) translate3d(136px,178px,0px);
+    -o-transform: rotateX(-90deg) rotateY(50deg) translate3d(136px,178px,0px);
+    transform: rotateX(-90deg) rotateY(50deg) translate3d(136px,178px,0px);
+}
+
+.pin4{
+    -webkit-transform: rotateX(-90deg) rotateY(50deg) translate3d(420px,188px,0px);
+    -moz-transform: rotateX(-90deg) rotateY(50deg) translate3d(420px,188px,0px);
+    -ms-transform: rotateX(-90deg) rotateY(50deg) translate3d(420px,188px,0px);
+    -o-transform: rotateX(-90deg) rotateY(50deg) translate3d(420px,188px,0px);
+    transform: rotateX(-90deg) rotateY(50deg) translate3d(420px,188px,0px);
+}
+
+.circ{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba(209, 255, 204, 0.5);
+}
+
+.circ:after,.circ:before{
+    display: block;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+}
+
+.circ:after{
+    width: 140px;
+    height: 140px;
+    background: rgba(255,255,255,0);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,193,107,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(255,193,107,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,193,107,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,193,107,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,193,107,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%, rgba(255,193,107,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffc16b', GradientType=1 );
+    margin-left: -70px;
+    margin-top: -70px;
+}
+
+.circ:before{
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,137,107,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(255,137,107,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,137,107,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,137,107,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0) 0%, rgba(255,137,107,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%, rgba(255,137,107,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ff896b', GradientType=1 );
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+
+.cir1{
+    -webkit-transform: translate3d(10px,-55px,0);
+    -moz-transform: translate3d(10px,-55px,0);
+    -ms-transform: translate3d(10px,-55px,0);
+    -o-transform: translate3d(10px,-55px,0);
+    transform: translate3d(10px,-55px,0);
+}
+
+.cir2{
+    -webkit-transform: translate3d(240px,-75px,0);
+    -moz-transform: translate3d(240px,-75px,0);
+    -ms-transform: translate3d(240px,-75px,0);
+    -o-transform: translate3d(240px,-75px,0);
+    transform: translate3d(240px,-75px,0);
+}
+
+.cir3 {
+    -webkit-transform: translate3d(480px,-75px,0);
+    -moz-transform: translate3d(480px,-75px,0);
+    -ms-transform: translate3d(480px,-75px,0);
+    -o-transform: translate3d(480px,-75px,0);
+    transform: translate3d(480px,-75px,0);
+}
+.cir4 {
+    -webkit-transform: translate3d(299px, 118px, 0);
+    -moz-transform: translate3d(299px, 118px, 0);
+    -ms-transform: translate3d(299px, 118px, 0);
+    -o-transform: translate3d(299px, 118px, 0);
+    transform: translate3d(299px, 118px, 0);
+ }
 
 .map-right,.map-left{
     display: inline-block;
     vertical-align: top;
+    position: relative;
+    height: 408px;
 }
 
 .map-left{
@@ -386,6 +582,10 @@ i.phone-icon{
 .map-description{
     text-align: center;
     margin-top: 20px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .descr{
@@ -466,14 +666,35 @@ i.phone-icon{
 }
 
 .third-left{
-    background: url(../img/aruba.png);
+    /*background: url(../img/aruba.png);*/
     width: 816px;
     height: 528px;
     position: absolute;
     z-index: -1;
-    margin-left: -180px;
+    margin-left: -225px;
     margin-top: 35px;
+    text-align: center;
+    /*-webkit-transform: translate3d(0,50px,0);
+    -moz-transform: translate3d(0,50px,0);
+    -ms-transform: translate3d(0,50px,0);
+    -o-transform: translate3d(0,50px,0);
+    transform: translate3d(0,50px,0);
+    opacity: .5;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;*/
 }
+
+/*.third-left.visible {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: 1;
+}*/
 
 i.aruba-clients{
     background-image: url(../img/clients.png);
