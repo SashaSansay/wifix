@@ -61,5 +61,8 @@ $(document).ready(function(){
         if($(window).scrollTop()+$(window).height() >= $('.third-section').offset().top){
             $('.third-section').addClass('started');
         }
+        if($(window).scrollTop()+$(window).height() >= $('.map').offset().top){
+            $('.map').addClass('started');
+        }
     });
 });
