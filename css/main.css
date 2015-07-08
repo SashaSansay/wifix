@@ -47,6 +47,7 @@ i.phone-icon{
     z-index: -1;
     top: -180px;
     left: 0px;
+    pointer-events: none;
 }
 
 .fixed i.phone-icon{
@@ -143,6 +144,30 @@ i.phone-icon{
     min-height: 640px;
 }
 
+.main-section:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 1;
+    -webkit-transition: .4s all ease;
+    -moz-transition: .4s all ease;
+    -ms-transition: .4s all ease;
+    -o-transition: .4s all ease;
+    transition: .4s all ease;
+    background-image: url('data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMdaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzAxNCA3OS4xNTY3OTcsIDIwMTQvMDgvMjAtMDk6NTM6MDIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkMzMTQzM0Y3MjU4MzExRTVBMzNFQ0IyODJEODg5MzVFIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkMzMTQzM0Y2MjU4MzExRTVBMzNFQ0IyODJEODg5MzVFIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE0IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0iRkUzNDRDM0FCNEMzQkUxREM1QUM2Mjc5QzBDRDBENTAiIHN0UmVmOmRvY3VtZW50SUQ9IkZFMzQ0QzNBQjRDM0JFMURDNUFDNjI3OUMwQ0QwRDUwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAwMDAwMDAwMDAwEBAQEBAQECAQECAgIBAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD/8AAEQgAAwAFAwERAAIRAQMRAf/EAGYAAQAAAAAAAAAAAAAAAAAAAAcBAQEAAAAAAAAAAAAAAAAAAAUGEAABAgQHAAAAAAAAAAAAAAASExQABRYXESIDBCQVJREAAQIDCQAAAAAAAAAAAAAAAREyAIESUWGhYnKiEzNE/9oADAMBAAIRAxEAPwBK0gu1v8L8uqmlJgtWbpnOk3JeN3ZkgHDSVPKnFGUqDug20OG1JJmgPzlqc41tM1xW6P/Z');
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+}
+
+.loaded.main-section:after{
+    opacity: 0;
+}
+
 .slider-main{
     height: 100%;
     min-height: 750px;
@@ -173,6 +198,7 @@ i.phone-icon{
     color: #fff;
     position: relative;
     top: 22%;
+    z-index: 2;
 }
 
 .main-section-main-text{
@@ -264,6 +290,7 @@ i.phone-icon{
     bottom: 40px;
     width: 100%;
     text-align: center;
+    z-index: 2;
 }
 
 .main-options-inner {

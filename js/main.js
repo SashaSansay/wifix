@@ -110,4 +110,9 @@ $(document).ready(function(){
     if($.browser.mozilla){
         $('body').addClass('mozilla');
     }
+
+    $('.main-section').waitForImages().done(function(){
+       $('.main-section').addClass('loaded');
+    });
+
 });
