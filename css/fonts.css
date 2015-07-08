@@ -6,7 +6,7 @@
     url('../fonts/light.woff2');
 }
 @font-face {
-    font-family: 'regular';
+        font-family: 'regular';
     src: url('../fonts/ref.otf'),
     url('../fonts/ref.eot'),
     url('../fonts/ref.woff'),

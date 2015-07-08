@@ -49,6 +49,30 @@ $(document).ready(function(){
     }
     init();
 
+    $firstOffset = 0;
+    $firstHeight = 0;
+    $secondHeight = 0;
+    $secondOffset =0;
+    $thirdHeight = 0;
+    $thirdOffset = 0;
+    $fourthHeight = 0;
+    $fourthOffset = 0;
+
+    function onScroll(){
+        var scrollPos = $(document).scrollTop()+60;
+        $('.fixed .main-menu a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.fixed .main-menu a').removeClass("active");
+                currLink.addClass("active");
+            }
+            else{
+                currLink.removeClass("active");
+            }
+        });
+    }
+
     $('.call-us').click(function(){
         $('body').addClass('opened');
     });
@@ -58,11 +82,32 @@ $(document).ready(function(){
     });
 
     $(window).scroll(function(){
-        if($(window).scrollTop()+$(window).height() >= $('.third-section').offset().top){
+        var curScroll = $(window).scrollTop()+$(window).height();
+        if(curScroll >= $('.third-section').offset().top){
             $('.third-section').addClass('started');
         }
-        if($(window).scrollTop()+$(window).height() >= $('.map').offset().top){
+        if(curScroll >= $('.map').offset().top){
             $('.map').addClass('started');
         }
+        if(curScroll >= $('.fourth-section').offset().top){
+            $('.fourth-section').addClass('started');
+        }
+        if($(window).scrollTop() >= $('.main-section').height()*0.75){
+            $('.main-head.fixed').addClass('active');
+        }else{
+            $('.main-head.fixed').removeClass('active');
+        }
+        onScroll();
     });
+
+    $("a[href^='#']").click(function(){
+        var body = $("html, body");
+        $this = $(this);
+        $elem = $('[id='+$this.attr('href').substring(1)+']');
+        body.animate({scrollTop:$elem.offset().top}, '500', 'swing', function(){});
+    });
+
+    if($.browser.mozilla){
+        $('body').addClass('mozilla');
+    }
 });
