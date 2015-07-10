@@ -73,7 +73,7 @@ i.phone-icon{
 
 .main-head{
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     line-height: 40px;
     z-index: 99;
     position: absolute;
@@ -310,6 +310,9 @@ i.phone-icon{
     color: #fff;
     display: inline-block;
     vertical-align: bottom;
+}
+.option-main-4{
+    margin-left: 71px;
 }
 .option-main-wrap i{
     margin-bottom: 10px;
@@ -992,7 +995,7 @@ i.phone-icon{
 }
 
 .third-section{
-    padding-bottom: 180px;
+    padding-bottom: 120px;
     overflow: hidden;
 }
 
@@ -1052,8 +1055,8 @@ i.phone-icon{
 
 i.aruba-clients{
     background-image: url(../img/clients.png);
-    width: 560px;
-    height: 59px;
+    width: 549px;
+    height: 132px;
     margin-top: 32px;
 }
 
@@ -1075,7 +1078,7 @@ i.aruba-clients{
 }
 
 .install-steps {
-    width: 1040px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
 }
@@ -1095,44 +1098,63 @@ i.aruba-clients{
     overflow: hidden;
 }
 
-.started .install-step.step-1 i svg{
+.install-step.step-1 i svg,.install-step.step-2 i svg,.install-step.step-3 i svg,.install-step.step-4 i svg{
+    -webkit-transform: translateY(110px);
+    -moz-transform: translateY(110px);
+    -ms-transform: translateY(110px);
+    -o-transform: translateY(110px);
+    transform: translateY(110px);
+}
+
+.install-step.step-1 i svg{
     width: 120px;
     height: 83px;
     opacity: 0;
-    transform: translateY(110px);
+}
+
+.started .install-step.step-1 i svg{
     -webkit-animation: up 0.85s ease-in-out forwards;
     animation: up 0.85s ease-in-out forwards;
     -webkit-animation-delay: 0.35s;
     animation-delay: 0.35s;
 
 }
-.started .install-step.step-2 i svg{
+
+.install-step.step-2 i svg{
     width: 150px;
     height: 94px;
     opacity: 0;
+}
+
+.started .install-step.step-2 i svg{
     margin-left: -10px;
-    transform: translateY(110px);
     -webkit-animation: up 0.85s ease-in-out forwards;
     animation: up 0.85s ease-in-out forwards;
     -webkit-animation-delay: 0.45s;
     animation-delay: 0.45s;
 }
-.started .install-step.step-3 i svg{
+
+.install-step.step-3 i svg{
     width: 66px;
     height: 94px;
     opacity: 0;
+}
+
+.started .install-step.step-3 i svg{
     margin-left: 25px;
-    transform: translateY(110px);
     -webkit-animation: up 0.85s ease-in-out forwards;
     animation: up 0.85s ease-in-out forwards;
     -webkit-animation-delay: 0.55s;
     animation-delay: 0.55s;
 }
-.started .install-step.step-4 i svg{
+
+.install-step.step-4 i svg{
     width: 112px;
     height: 96px;
     opacity: 0;
-    transform: translateY(110px);
+}
+
+.started .install-step.step-4 i svg{
     -webkit-animation: up 0.85s ease-in-out forwards;
     animation: up 0.85s ease-in-out forwards;
     -webkit-animation-delay: 0.65s;
@@ -1194,7 +1216,7 @@ i.aruba-clients{
     left: -201px;
 }
 
-.step-2+.step-3{
+.step-3{
     margin-left: 150px;
 }
 
@@ -1285,8 +1307,15 @@ i.aruba-clients{
 
 i.clients-wifix{
     background: url(../img/clients-wifix-1.png);
-    width: 1040px;
-    height: 167px;
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+i.clients-wifix:after{
+    content: '';
+    display: block;
+    padding-top: 14.5873%;
 }
 
 .section-contacts{
@@ -1613,8 +1642,28 @@ i.error{
     display: none;
 }
 
-.tablet-view,.mobile-view{
+.tablet-view,.mobile-view,.tablet-show{
     display: none;
+}
+
+.close-feedback-inline{
+    margin-left: 39px;
+    font-size: 1.3125rem;
+    color: #26a9e0;
+}
+
+.phone-white{
+    color: #fff;
+    text-decoration: none;
+}
+
+.phone{
+    color: #fff;
+    text-decoration: none;
+}
+
+.fixed .phone{
+    color:#1e1e1e;
 }
 
 @media all and (max-width: 1070px){
@@ -1640,6 +1689,14 @@ i.error{
     .option-main-wrap+.option-main-wrap {
         margin-left: 7vw;
     }
+
+    .tablet-show{
+        display: block;
+    }
+
+    .step-3{
+        margin-left: 0;
+    }
 }
 
 
@@ -1658,12 +1715,16 @@ i.error{
         font-size: 16px;
     }
 
-    .options-main{
+    .mobile-hide{
         display: none;
     }
 
     .mobile-view{
         display: block;
+    }
+
+    .options-main{
+        display: none;
     }
 
     .phone{
@@ -1689,6 +1750,7 @@ i.error{
     .main-section{
         min-height: 400px;
         padding-top: 0;
+        height: 85vh;
     }
 
     .main-section-inner{
@@ -1697,6 +1759,7 @@ i.error{
 
     .button-call-main{
         font-size: 1.3125rem;
+        padding: 9px 13px 10px;
     }
 
     .second-main-text{
@@ -1708,4 +1771,380 @@ i.error{
     .second-inner{
         padding-top: 40px;
     }
+
+    .second-main-subline{
+        margin-top: 20px;
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.4375rem;
+    }
+    .option{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .options{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .option-num{
+        font-size: 4rem;
+        margin-left: -0.15rem;
+        margin-right: 0.35rem;
+        margin-bottom: 9px;
+    }
+
+    .option-head{
+        margin-top: 8px;
+    }
+
+    .option-text{
+        font-size: 1rem;
+        line-height: 1.4375rem;
+    }
+
+    .map-left{
+        margin-top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .map-left-head{
+        font-size: 1.875rem;
+        line-height: 2.4375rem;
+        margin-bottom: 15px;
+    }
+
+    .map-left-text{
+        font-size: 1rem;
+        line-height: 1.4375rem;
+    }
+
+    .button-smaller{
+        font-size: 1.0625rem;
+    }
+
+    .button-call-main.button-smaller:before{
+        border-width: 18px 12px 18px 0;
+    }
+
+    .button-call-main.button-smaller:after{
+        border-width: 18px 0 18px 12px;
+    }
+
+
+    .map-left-subline{
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+
+    .map-right{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .pins,.map-image{
+        display: none;
+    }
+
+    .map-image-mobile{
+        width: 130vw;
+        background: url(../img/map-1.png);
+        -webkit-background-size: cover;
+        background-size: cover;
+        margin-left: -23.4375vw;
+        max-width: 640px;
+    }
+
+    .map-image-mobile:after{
+        content: '';
+        display: block;
+        padding-top: 39.582%;
+    }
+
+    .third-inner{
+        padding-top: 50px;
+        overflow: visible;
+    }
+
+    .third-head{
+        font-size: 2.125rem;
+        line-height: 2.375rem;
+        margin-bottom: 20px;
+    }
+
+    .third-right{
+        width: 100%;
+    }
+
+    .third-left{
+        position: relative;
+    }
+
+    .aruba{
+        width: 76.875vw;
+        height: auto;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .aruba:after{
+        content: '';
+        display: block;
+        padding-top: 101.9498%;
+    }
+
+    .third-left{
+        width: auto;
+        height: auto;
+    }
+
+    .aruba-mobile{
+        display: block;
+        background: url(../img/aruba-mobile.jpg);
+        width: 100vw;
+        -webkit-background-size: cover;
+        background-size: cover;
+        margin-left: -8.4375vw
+    }
+
+    .aruba-mobile:after{
+        content: '';
+        display: block;
+        padding-top: 111.0937%;
+    }
+
+    .third-text{
+        font-size: 1rem;
+        line-height: 1.4375rem;
+        margin-top: -23vw;
+    }
+
+    i.aruba-clients{
+        background: url(../img/aruba-clients-mobile.png);
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+    }
+    i.aruba-clients:after{
+        content: '';
+        display: block;
+        padding-top: 38.8367%;
+    }
+
+    .third-section{
+        padding-bottom: 40px;
+    }
+
+    .fourth-section{
+        padding: 30px 0 30px;
+    }
+
+    .install-head{
+        font-size: 2.125rem;
+        line-height: 2.375rem;
+        margin-bottom: 30px;
+    }
+
+    .install-steps{
+        text-align: left;
+    }
+
+    .line{
+        display: none;
+    }
+
+    .install-steps{
+        width: 100%;
+    }
+
+    .install-step{
+        width: 100%;
+    }
+
+    .install-step+.install-step{
+        margin-left: 0;
+    }
+    .install-step.step-1 i svg{
+        height: auto;
+        width: 29%;
+    }
+
+    .install-step.step-2 i svg{
+        height: auto;
+        width: 36%;
+        margin-left: 0;
+    }
+
+    .install-step.step-3 i svg{
+        height: auto;
+        margin-left: 0;
+        width: 18%;
+    }
+
+    .started .install-step.step-3 i svg{
+        margin-left: 0;
+    }
+
+    .started .install-step.step-2 i svg {
+        margin-left: 13px;
+    }
+
+    .install-step.step-4 i svg{
+        height: auto;
+        width: 32%;
+    }
+
+    .install-step-text{
+        font-size: 1.3125rem;
+        line-height: 1.625rem;
+    }
+
+    .install-step i{
+        margin-bottom: -5px;
+    }
+
+    .install-step{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    i.clients-wifix{
+        background-image: url(../img/clients-mobile.png);
+    }
+
+    i.clients-wifix:after{
+        padding-top: 114.9722%;
+    }
+
+    .clients-head{
+        font-size: 2.125rem;
+        margin-bottom: 20px;
+    }
+
+    .section-clients{
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    .contacts-right{
+        width: 100%;
+    }
+
+    .contacts-inner{
+        overflow: visible;
+    }
+
+    .section-contacts{
+        padding-top: 0;
+    }
+
+    .contacts-inner{
+        padding-top: 170px;
+    }
+
+    .contacts-right{
+        font-size: 1.3125rem;
+        line-height: 1.625rem;
+    }
+
+    .feedback-wrap{
+        width: 100vw;
+        left: 50%;
+        height: 320px;
+    }
+
+    .feedback-form{
+        padding: 23px 25px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .feedback-head{
+        font-size: 2.125rem;
+        line-height: 2.0625rem;
+    }
+
+    .text{
+        width: calc(100% - 50px);
+        font-size: 1.5rem;
+        padding: 12px 22px 12px;
+    }
+
+    i.error.phone {
+        top: 198px;
+        right: 48px;
+    }
+    i.ok.phone {
+        top: 198px;
+        right: 45px;
+    }
+    i.ok.name {
+        top: 131px;
+        right: 45px;
+    }
+    i.error.name {
+        top: 131px;
+        right: 48px;
+    }
+
+    .close-feedback{
+        font-size: 14px;
+        right: 5vw;
+        top: 5vw;
+        display: none;
+    }
+
+    .dark{
+        background: #fff;
+    }
+
+    .close-feedback-inline{
+        display: inline;
+        font-size: 1.1875rem;
+    }
+
+    .feedback-head{
+        margin-bottom: 20px;
+    }
+
+    .feedback-button {
+        margin-top: 8px;
+    }
+
+    .install-step i svg,.install-step-text{
+        -webkit-animation: none !important;
+        -o-animation: none !important;
+        animation: none !important;
+        -webkit-transform: translateY(0) !important;
+        -moz-transform: translateY(0) !important;
+        -ms-transform: translateY(0) !important;
+        -o-transform: translateY(0) !important;
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+    }
+
+    .send-text{
+        color: #1a1a1a;
+    }
+    .install-step.step-2 i svg{
+        margin-left: 13px !important;
+    }
+
+}
+
+@media all and (min-width: 490px){
+    .map-image-mobile{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+.map-description{
+    display: none;
 }

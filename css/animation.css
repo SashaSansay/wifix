@@ -28,54 +28,55 @@
 }
 
 .power {
+    background-color: rgba(127, 255, 0, 0.92);;
     width: 7px;
     height: 13px;
-    background-color: #FF7700;
     border-radius: 8px;
     position: absolute;
     top: 325px;
     left: 157px;
+    filter: blur(2px);
     -webkit-filter: blur(2px);
-filter: blur(2px);
-    -webkit-transform: rotate(5deg);
-    -moz-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
     transform: rotate(5deg);
 }
 
 .ent {
+    background-color: rgba(127, 255, 0, 0.92);
     width: 7px;
     height: 14px;
-    background-color: #fff;
     border-radius: 8px;
     position: absolute;
     top: 323px;
-    left: 191px;
-    -webkit-filter: blur(2px);
+    left: 174px;
     filter: blur(2px);
-    -webkit-transform: rotate(9deg);
-    -moz-transform: rotate(9deg);
-    -ms-transform: rotate(9deg);
-    -o-transform: rotate(9deg);
-    transform: rotate(9deg);
+    -webkit-filter: blur(2px);
+    transform: rotate(3deg);
 }
 
 .hz {
+    background-color: rgba(127, 255, 0, 0.92);
     width: 8px;
     height: 14px;
-    background-color: #fff;
     border-radius: 8px;
     position: absolute;
     top: 324px;
     left: 207px;
+    filter: blur(2px);
     -webkit-filter: blur(2px);
-filter: blur(2px);
-    -webkit-transform: rotate(14deg);
-    -moz-transform: rotate(14deg);
-    -ms-transform: rotate(14deg);
-    -o-transform: rotate(14deg);
     transform: rotate(14deg);
+}
+
+.hz1 {
+    background-color: rgba(127, 255, 0, 0.92);
+    width: 8px;
+    height: 14px;
+    border-radius: 8px;
+    position: absolute;
+    top: 323px;
+    left: 191px;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transform: rotate(4deg);
 }
 
 .on {

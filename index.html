@@ -39,17 +39,28 @@
         <script src="js/hugrid.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
+                /*//pageUnits = 'px';
+                //colUnits = 'px';
+                //pagewidth = 1040;
+                //columns = 9;
+                //columnwidth = 80;
+                //gutterwidth = 40;
+                //pagetopmargin = 0;
+                //rowheight = 20;
+                //gridonload = 'on';
+                //makehugrid();
+                //setgridonload();*/
                 pageUnits = 'px';
                 colUnits = 'px';
-                pagewidth = 1040;
+                pagewidth = 320;
                 columns = 9;
-                columnwidth = 80;
-                gutterwidth = 40;
+                columnwidth = 27;
+                gutterwidth = 10;
                 pagetopmargin = 0;
                 rowheight = 20;
                 gridonload = 'on';
-                //makehugrid();
-                //setgridonload();
+               //makehugrid();
+               //setgridonload();
             });
         </script>
     </head>
@@ -99,9 +110,9 @@
                     <li class="main-menu__item"><a href="#process">Процесс</a></li>
                     <li class="main-menu__item"><a href="#contacts">Контакты</a></li>
                 </ul>
-                <span class="phone">
+                <a tabIndex="-1" href="tel:88462129877" class="phone">
                     <i class="phone-icon"></i> 8 (846) 212-98-77
-                </span>
+                </a>
             </div>
         </header>
         <header class="main-head center fixed">
@@ -220,9 +231,9 @@
                     СЕТЬ С УМОМ
                 </div>
                 <div class="second-main-subline col-6-5-gut">
-                    Мы начинаем строительство сети с исследования.<br>
-                    Это позволяет получить до «<a href="#" class="second-href tooltip" data-tooltip="ДА,ДА ОВЕР 99.3%!!">99,3% uptime</a>» работы сети
-                    в будущем. Вся работа проходит бесплатно, вы платите
+                    Мы начинаем строительство сети с исследования.<br class="mobile-hide">
+                    Это позволяет получить до «<a class="second-href tooltip" data-tooltip="ДА,ДА ОВЕР 99.3%!!">99,3% uptime</a>» работы сети
+                    в будущем. <br class="mobile-view">Вся работа проходит бесплатно, вы платите
                     только за оборудование
                 </div>
                 <div class="options">
@@ -266,13 +277,13 @@
                             СЕТИ ОФИСА
                         </h2>
                         <div class="map-left-text">
-                            В результате исследования,<br>
-                            вы получаете визуализацию<br>
-                            будующей сети и техническое описание<br>
-                            на проектирование. Эти документы<br>
+                            В результате исследования,<br class="mobile-hide">
+                            вы получаете визуализацию<br class="mobile-hide">
+                            будующей сети и техническое описание<br class="mobile-hide">
+                            на проектирование. Эти документы<br class="mobile-hide">
                             гарантируютсоздание надежной сети.
                         </div>
-                        <div class="call-us button-call-main">
+                        <div class="call-us button-call-main button-smaller">
                             Перезвонить вам
                         </div>
                         <div class="map-left-subline">
@@ -281,6 +292,7 @@
                         </div>
                     </div><!--
                     --><div class="map-right col-6-6-gut">
+                        <div class="map-image-mobile mobile-view"></div>
                         <div class="pins">
                             <div class="pin pin1"></div>
                             <div class="pin pin2"></div>
@@ -343,12 +355,16 @@
         </section>
         <section class="third-section" id="equipment">
             <div class="third-inner main-width center">
-                <div class="third-left">
+                <div class="third-head mobile-view">
+                    Теплый приём<br>от ARUBA
+                </div>
+                <div class="third-left mobile-hide">
                     <div id='td'>
                         <div class='aruba'>
                             <div class='power on on1'></div>
-                            <div class='ent on on2'></div>
-                            <div class='hz on zz'></div>
+                            <div class='ent on zz'></div>
+                            <div class='hz on on2'></div>
+                            <div class='hz1 on on3'></div>
                         </div>
                         <div class='shadow'></div>
                         <div class='circles'>
@@ -361,13 +377,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="mobile-view aruba-mobile"></div>
                 <div class="third-right col-5-4-gut">
-                    <div class="third-head">Теплый приём<br>от ARUBA</div>
+                    <div class="third-head mobile-hide">Теплый приём<br>от ARUBA</div>
                     <div class="third-text">
-                        В основе наших сетей лежат технологии<br>
+                        В основе наших сетей <br class="mobile-view">лежат технологии<br class="mobile-hide">
                         «Aruba Networks».<br>
                         <br>
-                        Это стандарт на рынке Wi-Fi решений и официальный<br>
+                        Это стандарт на рынке Wi-Fi решений и официальный<br  class="mobile-hide">
                         лидер в своем сегменте, на протяжении пяти лет.<br>
                         <br>
                         Клиентами компании являются самые современные компании с крупной инфраструктурой, среди которых:
@@ -422,7 +439,7 @@
                         </svg></i>
                         <div class="install-step-text text1">
                             Сбор потребностей<br>
-                            и радиочастотный<br>
+                            и радиочастотный<br class="mobile-hide">
                             анализ
                         </div>
                     </div>
@@ -464,10 +481,11 @@
                             <line fill="none" stroke="#044166" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="120.758" y1="45.403" x2="123.705" y2="48.349"/>
                         </svg></i>
                         <div class="install-step-text text2">
-                            Визуальный<br>
+                            Визуальный<br class="mobile-hide">
                             план
                         </div>
                     </div>
+                    <div class="tablet-show"></div>
                     <div class="install-step step-3">
                         <i><svg xmlns="http://www.w3.org/20031FF/svg" viewBox="0 0 68 96" enable-background="new 0 0 68 96" class="icon3">
                             <rect x="2" y="2.5" fill="none" stroke="#044166" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="64" height="92"/>
@@ -511,7 +529,7 @@
     93,54.667 93,95.667 21,95.667 21,54.667 2,54.667 57.876,2.167 111.75,54.667 "/>
                         </svg></i>
                         <div class="install-step-text text4">
-                            Монтаж<br>
+                            Монтаж<br class="mobile-hide">
                             и настройка
                         </div>
                     </div>
@@ -520,8 +538,11 @@
         </section>
         <section class="section-clients">
             <div class="clients-wrap main-width center">
-                <div class="clients-head">
+                <div class="clients-head mobile-hide">
                     НАШИ Клиенты
+                </div>
+                <div class="clients-head mobile-view">
+                    Клиенты
                 </div>
                 <i class="clients-wifix"></i>
             </div>
@@ -529,7 +550,7 @@
         <section class="section-contacts" id="contacts">
             <div id="gmap"></div>
             <div class="contacts-inner main-width center">
-                <div class="contacts-head col-3-3-gut">
+                <div class="contacts-head col-3-3-gut mobile-hide">
                     Контактная<br>
                     информация
                 </div>
@@ -537,7 +558,7 @@
                     443080, Самара,<br>
                     ул. Московское шоссе, 55<br>
                     офис 612<br><br>
-                    8 (846) 212-98-77<br>
+                    <a href="tel:88462129877" class="phone-white">8 (846) 212-98-77</a><br>
                     <a href="mailto:info@wifix.pro" class="send-mail">info@wifix.pro</a><br><br>
                     <div class="call-us button-call-main contacts-button">
                         Перезвонить вам
@@ -563,6 +584,7 @@
                         <button class="button-call-main feedback-button">
                             Отправить
                         </button>
+                        <a class="close-feedback-inline mobile-view" href="#">Закрыть</a>
                     </form>
                 </div>
             </div>

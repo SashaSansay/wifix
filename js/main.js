@@ -1,7 +1,11 @@
 $(document).ready(function(){
     function init() {
+        var center = new google.maps.LatLng(53.2225657,50.1905889);
+        if($mobile){
+            center = new google.maps.LatLng(53.2143943,50.1904172);
+        }
         var mapOptions = {
-            center: new google.maps.LatLng(53.2225657,50.1905889),
+            center: center,
             zoom: 14,
             zoomControl: false,
             disableDoubleClickZoom: true,
@@ -29,7 +33,6 @@ $(document).ready(function(){
             map: map
         })
     }
-    init();
 
     $firstOffset = 0;
     $firstHeight = 0;
@@ -55,15 +58,21 @@ $(document).ready(function(){
         });
     }
 
+    $mobile = false;
+
     function resize(){
         if($(window).width()<1070){
             $('body').addClass('mobile');
+            $mobile = true;
         }else{
             $('body').removeClass('mobile');
+            $mobile = false;
         }
     }
 
     resize();
+
+    init();
 
     $(window).resize(function(){
         resize()
@@ -79,7 +88,7 @@ $(document).ready(function(){
         $('body').removeClass('opened');
     });
 
-    $('.close-feedback').click(function(){
+    $('.close-feedback,.close-feedback-inline').click(function(){
        $('body').removeClass('opened');
     });
 
@@ -135,6 +144,12 @@ $(document).ready(function(){
             $('.feedback-form').addClass('error-phone');
             $('.feedback-form').removeClass('ok-phone');
         }
+    });
+
+    $('.tooltip').click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
     });
 
     $('.feedback-button').click(function(e){
