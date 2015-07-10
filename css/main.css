@@ -32,9 +32,18 @@ i.phone-icon{
     left: -2px;
 }
 
+.logo-link{
+    position: relative;
+    display: block;
+}
+
 .logo-svg{
     display: inline-block;
     float: left;
+}
+
+.fixed .logo-svg{
+    width: 100px;
 }
 
 .logo-link:after{
@@ -46,7 +55,7 @@ i.phone-icon{
     height: 389px;
     z-index: -1;
     top: -180px;
-    left: 0px;
+    left: -160px;
     pointer-events: none;
 }
 
@@ -161,7 +170,7 @@ i.phone-icon{
     background-image: url('data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMdaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzAxNCA3OS4xNTY3OTcsIDIwMTQvMDgvMjAtMDk6NTM6MDIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkMzMTQzM0Y3MjU4MzExRTVBMzNFQ0IyODJEODg5MzVFIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkMzMTQzM0Y2MjU4MzExRTVBMzNFQ0IyODJEODg5MzVFIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE0IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0iRkUzNDRDM0FCNEMzQkUxREM1QUM2Mjc5QzBDRDBENTAiIHN0UmVmOmRvY3VtZW50SUQ9IkZFMzQ0QzNBQjRDM0JFMURDNUFDNjI3OUMwQ0QwRDUwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAwMDAwMDAwMDAwEBAQEBAQECAQECAgIBAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD/8AAEQgAAwAFAwERAAIRAQMRAf/EAGYAAQAAAAAAAAAAAAAAAAAAAAcBAQEAAAAAAAAAAAAAAAAAAAUGEAABAgQHAAAAAAAAAAAAAAASExQABRYXESIDBCQVJREAAQIDCQAAAAAAAAAAAAAAAREyAIESUWGhYnKiEzNE/9oADAMBAAIRAxEAPwBK0gu1v8L8uqmlJgtWbpnOk3JeN3ZkgHDSVPKnFGUqDug20OG1JJmgPzlqc41tM1xW6P/Z');
     -webkit-background-size: cover;
     background-size: cover;
-    z-index: 1;
+    z-index: -1;
 }
 
 .loaded.main-section:after{
@@ -351,7 +360,6 @@ i.phone-icon{
 
 .second-inner{
     padding-top: 100px;
-    padding-bottom: 140px;
 }
 
 .second-main-text{
@@ -988,6 +996,11 @@ i.phone-icon{
     overflow: hidden;
 }
 
+.third-inner{
+    overflow: hidden;
+    padding-top: 140px;
+}
+
 .third-right{
     float: right;
 }
@@ -1089,8 +1102,8 @@ i.aruba-clients{
     transform: translateY(110px);
     -webkit-animation: up 0.85s ease-in-out forwards;
     animation: up 0.85s ease-in-out forwards;
-    -webkit-animation-delay: 0.75s;
-    animation-delay: 0.75s;
+    -webkit-animation-delay: 0.35s;
+    animation-delay: 0.35s;
 
 }
 .started .install-step.step-2 i svg{
@@ -1101,8 +1114,8 @@ i.aruba-clients{
     transform: translateY(110px);
     -webkit-animation: up 0.85s ease-in-out forwards;
     animation: up 0.85s ease-in-out forwards;
-    -webkit-animation-delay: 1.75s;
-    animation-delay: 1.75s;
+    -webkit-animation-delay: 0.45s;
+    animation-delay: 0.45s;
 }
 .started .install-step.step-3 i svg{
     width: 66px;
@@ -1112,8 +1125,8 @@ i.aruba-clients{
     transform: translateY(110px);
     -webkit-animation: up 0.85s ease-in-out forwards;
     animation: up 0.85s ease-in-out forwards;
-    -webkit-animation-delay: 2.75s;
-    animation-delay: 2.75s;
+    -webkit-animation-delay: 0.55s;
+    animation-delay: 0.55s;
 }
 .started .install-step.step-4 i svg{
     width: 112px;
@@ -1122,34 +1135,37 @@ i.aruba-clients{
     transform: translateY(110px);
     -webkit-animation: up 0.85s ease-in-out forwards;
     animation: up 0.85s ease-in-out forwards;
-    -webkit-animation-delay: 3.75s;
-    animation-delay: 3.75s;
+    -webkit-animation-delay: 0.65s;
+    animation-delay: 0.65s;
 }
 
 .install-step-text {
     opacity: 0;
     transform: translateY(110px);
-    -webkit-animation: up 0.85s ease-in-out forwards;
-    animation: up 0.85s ease-in-out forwards;
-    -webkit-animation-delay: 0.75s;
-    animation-delay: 0.75s;
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
 }
 
-.started .text1 {
+.started .install-step-text {
+    -webkit-animation: up 0.85s ease-in-out forwards;
+    animation: up 0.85s ease-in-out forwards;
+}
+
+.text1 {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+.text2 {
+    -webkit-animation-delay: 0.35s;
+    animation-delay: 0.35s;
+}
+.text3 {
+    -webkit-animation-delay: 0.45s;
+    animation-delay: 0.45s;
+}
+.text4 {
     -webkit-animation-delay: 0.55s;
     animation-delay: 0.55s;
-}
-.started .text2 {
-    -webkit-animation-delay: 1.55s;
-    animation-delay: 1.55s;
-}
-.started .text3 {
-    -webkit-animation-delay: 2.55s;
-    animation-delay: 2.55s;
-}
-.started .text4 {
-    -webkit-animation-delay: 3.55s;
-    animation-delay: 3.55s;
 }
 
 .install-steps{
@@ -1219,22 +1235,22 @@ i.aruba-clients{
 }
 
 .started .line_s1 {
-    -webkit-animation: rotate 1.45s ease-in-out forwards;
-    animation: rotate 1.45s ease-in-out forwards;
-    -webkit-animation-delay: 0.85s;
-    animation-delay: 0.85s;
+    -webkit-animation: rotate 1s ease-in-out forwards;
+    animation: rotate 1s ease-in-out forwards;
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
 }
 .started .line_s2 {
-    -webkit-animation: rotate 1.45s ease-in-out forwards;
-    animation: rotate 1.45s ease-in-out forwards;
-    -webkit-animation-delay: 1.85s;
-    animation-delay: 1.85s;
+    -webkit-animation: rotate 1s ease-in-out forwards;
+    animation: rotate 1s ease-in-out forwards;
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
 }
 .started .line_s3 {
-    -webkit-animation: rotate 1.45s ease-in-out forwards;
-    animation: rotate 1.45s ease-in-out forwards;
-    -webkit-animation-delay: 2.85s;
-    animation-delay: 2.85s;
+    -webkit-animation: rotate 1s ease-in-out forwards;
+    animation: rotate 1s ease-in-out forwards;
+    -webkit-animation-delay: 0.35s;
+    animation-delay: 0.35s;
 }
 
 
@@ -1350,10 +1366,19 @@ i.clients-wifix{
     -ms-transition: all .1s ease;
     -o-transition: all .1s ease;
     transition: all .1s ease;
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.91) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.68)), color-stop(100%,rgba(0,0,0,0.91))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.68) 0%,rgba(0,0,0,0.91) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.68) 0%,rgba(0,0,0,0.91) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.68) 0%,rgba(0,0,0,0.91) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(0,0,0,0.68) 0%,rgba(0,0,0,0.91) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad000000', endColorstr='#e8000000',GradientType=1 );
+    opacity: 0;
 }
 
 .opened .dark{
     visibility: visible;
+    opacity: 1;
 }
 
 .close-feedback{
@@ -1363,6 +1388,23 @@ i.clients-wifix{
     right: 50px;
     top: 50px;
     cursor: pointer;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.close-feedback:hover{
+    color:#BFBFBF;
+}
+
+.close-feedback:hover i.close{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 i.close{
@@ -1372,6 +1414,11 @@ i.close{
     margin-right: 5px;
     position: relative;
     top: 2px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .feedback-wrap{
@@ -1407,6 +1454,9 @@ i.close{
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     opacity: 0;
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .opened .feedback-wrap{
@@ -1419,6 +1469,14 @@ i.close{
     -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
     opacity: 1;
+}
+
+.message-sent .feedback-form{
+    -webkit-transform: rotateY(-70deg);
+    -moz-transform: rotateY(-70deg);
+    -ms-transform: rotateY(-70deg);
+    transform: rotateY(-70deg);
+    opacity: 0;
 }
 
 .feedback-head{
@@ -1451,15 +1509,203 @@ i.close{
 .feedback-button{
     margin-top: 17px;
 }
+
+.send-text{
+    font-size: 38px;
+    line-height: 38px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -122px;
+    margin-top: -37px;
+    -webkit-transition: .4s all ease;
+    -moz-transition: .4s all ease;
+    -ms-transition: .4s all ease;
+    -o-transition: .4s all ease;
+    transition: .4s all ease;
+    -webkit-transition-delay: .3s;
+    -moz-transition-delay: .3s;
+    -ms-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+    -webkit-transform: translateY(140px);
+    -moz-transform: translateY(140px);
+    -ms-transform: translateY(140px);
+    -o-transform: translateY(140px);
+    transform: translateY(140px);
+    opacity: 0;
+}
+
+.message-sent .send-text{
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
 i.ok{
     background: url(../img/ok.png);
     width: 19px;
     height: 14px;
     position: absolute;
+}
+
+i.ok.name{
+    top: 159px;
+    right: 55px;
+}
+
+i.ok.phone{
     top: 224px;
     right: 55px;
 }
 
+i.error.name{
+    top: 161px;
+    right: 58px;
+}
+
+i.error.phone{
+    top: 225px;
+    right: 58px;
+}
+
+i.error{
+    background: url(../img/error.png);
+    width: 12px;
+    height: 12px;
+    position: absolute;
+}
+
+.feedback-wrap i{
+    opacity: 0;
+}
+
+.error-name i.error.name{
+    opacity: 1;
+}
+
+.ok-name i.ok.name{
+    opacity: 1;
+}
+
+.error-phone i.error.phone{
+    opacity: 1;
+}
+
+.ok-phone i.ok.phone{
+    opacity: 1;
+}
+
 .second-main-text,.third-head,.clients-head{
     color: #1a1a1a;
+}
+
+.main-section-main-text, .second-main-text,.clients-head{
+    letter-spacing: -0.5685px;
+}
+
+
+.mobile .main-head.fixed{
+    display: none;
+}
+
+.tablet-view,.mobile-view{
+    display: none;
+}
+
+@media all and (max-width: 1070px){
+    .main-width{
+        width: 83.125%;
+    }
+    .main-menu li + li {
+        margin-left: 3vw;
+    }
+
+    .main-section-inner{
+        top: 3vh;
+    }
+
+    .tablet-view{
+        display: block;
+    }
+
+    .option-main-4{
+        margin-top: 23px;
+    }
+
+    .option-main-wrap+.option-main-wrap {
+        margin-left: 7vw;
+    }
+}
+
+
+@media all and (max-width: 900px){
+    .main-menu{
+        display: none;
+    }
+}
+
+@media all and (max-width: 770px){ /* mobile here*/
+
+/*    .main-width{
+        width: 266px;
+    }*/
+    body{
+        font-size: 16px;
+    }
+
+    .options-main{
+        display: none;
+    }
+
+    .mobile-view{
+        display: block;
+    }
+
+    .phone{
+        font-size: 0.875rem;
+    }
+
+    .logo-svg{
+        width: 85px;
+    }
+
+    .main-section-main-text{
+        font-size: 2.625rem;
+        line-height: 2.9375rem;
+        margin-bottom: 2vh;
+    }
+
+    .main-section-text{
+        font-size: 0.955625rem;
+        line-height: 1.39625rem;
+        margin-bottom: 5vh;
+    }
+
+    .main-section{
+        min-height: 400px;
+        padding-top: 0;
+    }
+
+    .main-section-inner{
+        top: 20%;
+    }
+
+    .button-call-main{
+        font-size: 1.3125rem;
+    }
+
+    .second-main-text{
+        font-size: 2.125rem;
+        line-height: 2.375rem;
+        width: 100%;
+    }
+
+    .second-inner{
+        padding-top: 40px;
+    }
 }

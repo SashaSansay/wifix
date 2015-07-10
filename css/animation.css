@@ -1,20 +1,23 @@
 #td {
     display: inline-block;
     position: relative;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
     perspective: 1200px;
 }
 
 .aruba {
     width: 359px;
     height: 366px;
-    background-image: url(http://i.imgur.com/cdBctXq.png);
+    background-image: url(../img/cdBctXq.png);
     position: relative;
     display: inline-block;
     z-index: 3;
 }
 
 .shadow {
-    background-image: url(http://i.imgur.com/8uLcuJR.png);
+    background-image: url(../img/8uLcuJR.png);
     background-repeat: no-repeat;
     width: 435px;
     height: 74px;

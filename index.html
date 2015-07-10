@@ -5,6 +5,26 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>WIFIX</title>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+        <link rel="manifest" href="icon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/hugrid.css">
@@ -12,9 +32,9 @@
         <link rel="stylesheet" href="css/tooltips.css">
         <link rel="stylesheet" href="css/animation.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/jquery-1.6.2.min.js"></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js"></script>
-        <script src="js/jquery.waitforimages.min.js"></script>
+        <script src="js/maskedinput.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/hugrid.js"></script>
         <script type="text/javascript">
@@ -135,7 +155,7 @@
         <section class="main-section">
             <div class="main-section-inner main-width center">
                 <h2 class="main-section-main-text">
-                    Wi-Fi ДЛЯ ВАШЕГО БИЗНЕСА
+                    Wi-Fi <br class="mobile-view">ДЛЯ ВАШЕГО БИЗНЕСА
                 </h2>
                 <div class="main-section-text">
                     100% надежные беспроводные сети<br>
@@ -168,6 +188,7 @@
                             специалистов
                         </div>
                     </div>
+                    <div class="tablet-view"></div>
                     <div class="option-main-wrap option-main-4">
                         <i class="main-option-icon"></i>
                         <div class="main-option-text">
@@ -525,6 +546,10 @@
             </div>
         </section>
         <div class="dark">
+            <div class="send-text">
+                Спасибо<br>
+                за обращение!
+            </div>
             <div class="close-feedback"><i class="close"></i> Закрыть</div>
             <div class="feedback-wrap">
                 <div class="feedback-form">
@@ -533,8 +558,8 @@
                         с вами
                     </div>
                     <form class="feedback" action="/">
-                        <input class="text" type="text" placeholder="Как вас зовут?" name="name"/>
-                        <input class="text" type="text" placeholder="Укажите ваш телефон" name="phone"/><i class="ok"></i>
+                        <input class="text" type="text" placeholder="Как вас зовут?" id="name"/><i class="ok name"></i><i class="error name"></i>
+                        <input class="text" type="text" placeholder="Укажите ваш телефон" id="phone"/><i class="ok phone"></i><i class="error phone"></i>
                         <button class="button-call-main feedback-button">
                             Отправить
                         </button>

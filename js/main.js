@@ -28,24 +28,6 @@ $(document).ready(function(){
             position: new google.maps.LatLng(53.2225657, 50.1905889),
             map: map
         })
-        //for (i = 0; i < locations.length; i++) {
-        //    if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
-        //    if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
-        //    if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
-        //    if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
-        //    if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
-        //    marker = new google.maps.Marker({
-        //        icon: markericon,
-        //        position: new google.maps.LatLng(locations[i][5], locations[i][6]),
-        //        map: map,
-        //        title: locations[i][0],
-        //        desc: description,
-        //        tel: telephone,
-        //        email: email,
-        //        web: web
-        //    });
-        //    link = '';     }
-//
     }
     init();
 
@@ -73,8 +55,28 @@ $(document).ready(function(){
         });
     }
 
+    function resize(){
+        if($(window).width()<1070){
+            $('body').addClass('mobile');
+        }else{
+            $('body').removeClass('mobile');
+        }
+    }
+
+    resize();
+
+    $(window).resize(function(){
+        resize()
+    });
+
     $('.call-us').click(function(){
         $('body').addClass('opened');
+    });
+
+    $('.dark').click(function(e) {
+        if( e.target !== this )
+            return;
+        $('body').removeClass('opened');
     });
 
     $('.close-feedback').click(function(){
@@ -84,13 +86,17 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var curScroll = $(window).scrollTop()+$(window).height();
         if(curScroll >= $('.third-section').offset().top){
-            $('.third-section').addClass('started');
+            setTimeout(function(){
+                $('.third-section').addClass('started');
+            },1000);
         }
         if(curScroll >= $('.map').offset().top){
             $('.map').addClass('started');
         }
         if(curScroll >= $('.fourth-section').offset().top){
-            $('.fourth-section').addClass('started');
+            setTimeout(function() {
+                $('.fourth-section').addClass('started');
+            },1000);
         }
         if($(window).scrollTop() >= $('.main-section').height()*0.75){
             $('.main-head.fixed').addClass('active');
@@ -107,12 +113,55 @@ $(document).ready(function(){
         body.animate({scrollTop:$elem.offset().top}, '500', 'swing', function(){});
     });
 
-    if($.browser.mozilla){
+    if( navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ){
         $('body').addClass('mozilla');
     }
 
-    $('.main-section').waitForImages().done(function(){
-       $('.main-section').addClass('loaded');
+    $('#name').keyup(function(){
+        if($('#name').val().length==0){
+            $('.feedback-form').addClass('error-name');
+            $('.feedback-form').removeClass('ok-name');
+        }else{
+            $('.feedback-form').removeClass('error-name');
+            $('.feedback-form').addClass('ok-name');
+        }
     });
+
+    $('#phone').keyup(function(){
+        if($(this).val().indexOf('_')==-1){
+            $('.feedback-form').removeClass('error-phone');
+            $('.feedback-form').addClass('ok-phone');
+        }else{
+            $('.feedback-form').addClass('error-phone');
+            $('.feedback-form').removeClass('ok-phone');
+        }
+    });
+
+    $('.feedback-button').click(function(e){
+        $.get('/sendmail.php?phone='+$('#phone').val()+"&name="+$('#name').val(),function(data){
+            console.log(data);
+            $d = $.parseJSON(data);
+            if($d.error=="null"){
+                $('body').addClass('message-sent');
+                setTimeout(function(){
+                    $('body').removeClass('opened message-sent');
+                    $('#phone').val('');
+                    $('#name').val('');
+                },2000);
+            }else
+            if($d.error=="name"){
+                $('.feedback-form').addClass('error-name');
+                $('.feedback-form').removeClass('ok-name');
+            }else
+            if($d.error=="phone"){
+                $('.feedback-form').addClass('error-phone');
+                $('.feedback-form').removeClass('ok-phone');
+            }
+        });
+        e.preventDefault();
+        return false;
+    });
+
+    $("#phone").mask("+7 999 999 9999");
 
 });
